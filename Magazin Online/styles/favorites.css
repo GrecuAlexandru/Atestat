@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,800;1,900&display=swap");
+
+body {
+    background: #ffffff;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color:#2a2a2a;
+}
+#bigdiv{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+#mainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 53.9vh;
+    margin-top: 16vh;
+}
+#cartTitle{
+    font-size: 2vw;
+    font-weight: 700;
+    margin-bottom:2vh;
+    color:#2a2a2a;
+}
+
+#cartOutput{
+    display: flex;
+    flex-direction: column;
+}
+.cartItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40vw;
+    height: 23vh;
+    border-radius: 10px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    margin-bottom:2vh;
+}
+.removeButton{
+    position:absolute;
+    bottom:2vh;
+    right:2vh;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.cartImage{
+    width: 14vh;
+    height: 21vh;
+    border-radius: 10px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    margin-left:0.5vw;
+}
+.cartItemOptions{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    bottom:2vh;
+}
+.cartTextDiv{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left:1vw;
+}
+.cartItemTitle{
+    font-size:3vh;
+    color:#2a2a2a;
+}
+.limit{
+    width:70%;
+    word-wrap: break-word;
+    margin-top:1vh;
+}
+.cartItemType{
+    font-size:2vh;
+    color:#4b4b4b;
+}
+.cartItemPrice{
+    position: absolute;
+    right: 2vh;
+    top:2vh;
+    font-size: 2.5vh;
+    color:#2a2a2a;
+}
+.cartItemSizeTitle{
+    font-size:2vh;
+    color:#2a2a2a;
+    margin-left:2vh;
+}
+.cartItemColorTitle{
+    font-size:2vh;
+    color:#2a2a2a;
+}
+
+.colorDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cartItemColor{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 5px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    margin-left:1vh;
+}
+
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 10000000;
+    background-color: #e3c8ff;
+}
+#THEDIV {
+    display: none;
+}
+
+
+.hourglass{
+    display:block;
+    background:#e3c8ff;
+    margin:3em auto;
+    width:3em;
+    height:6em;
+    animation:hourglass 1s linear infinite;
+}
+
+.outer{
+    fill:#2a2a2a;
+}
+
+.middle{
+    fill:#e3c8ff;
+}
+
+@keyframes hourglass{
+    0%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset #2a2a2a 0 -0em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -6em 0 0;
+    }
+    80%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset #2a2a2a 0 -3em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -3em 0 0;
+    }
+    100%{
+        transform:rotate(180deg);
+        box-shadow:
+            inset #2a2a2a 0 -3em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -3em 0 0;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    #mainDiv{
+        margin-top:6vh;
+    }
+    #cartTitle{
+        font-size:6vw;
+    }
+    .cartItem{
+        width:90vw;
+    }
+    .cartImage{
+        margin-left:1.5vw;
+    }
+    .cartItemTitle{
+        font-size:2.5vh;
+    }
+    .cartItemType{
+        font-size:1.8vh;
+    }
+    .cartItemPrice{
+        font-size:2vh;   
+    }
+}
+@media screen and (min-width:769px) and (max-width:1024px) {
+    #mainDiv{
+        margin-top:6vh;
+    }
+    #cartTitle{
+        font-size:6vh;
+    }
+    .cartItem{
+        width:75vw;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1350px) {
+    #mainDiv{
+        margin-top:6vh;
+    }
+    #cartTitle{
+        font-size:6vh;
+    }
+    .cartItem{
+        width:55vw;
+    }
+}

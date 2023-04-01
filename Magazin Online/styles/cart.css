@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,800;1,900&display=swap");
+
+body {
+    background: #ffffff;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color:#2a2a2a;
+}
+#bigdiv{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+#mainDiv{
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 15vh;
+}
+#leftDiv{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    min-height: 30%;
+    margin-left:16vw;
+}
+#rightDiv{
+    margin-left: 5vw;
+}
+#cartTitle{
+    font-size: 2vw;
+    font-weight: 700;
+    margin-bottom:2vh;
+    color:#2a2a2a;
+}
+
+#summaryTitle{
+    font-size: 2vw;
+    font-weight: 700;
+    color:#2a2a2a;
+}
+
+#cartOutput{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.cartItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40vw;
+    height: 23vh;
+    border-radius: 10px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    margin-bottom:2vh;
+}
+.removeButton{
+    position:absolute;
+    bottom:2vh;
+    right:2vh;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.cartImage{
+    width: 14vh;
+    height: 21vh;
+    border-radius: 10px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    margin-left:0.5vw;
+    cursor: pointer;
+}
+.cartItemOptions{
+    position: absolute;
+    bottom:2vh;
+}
+.cartTextDiv{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left:1vw;
+}
+.cartItemTitle{
+    font-size:3vh;
+    color:#2a2a2a;
+    cursor: pointer;
+}
+.cartItemType{
+    font-size:2vh;
+    color:#4b4b4b;
+}
+.cartItemPrice{
+    position: absolute;
+    right: 2vh;
+    top:2vh;
+    font-size: 2.5vh;
+    color:#2a2a2a;
+}
+.cartItemSizeTitle{
+    font-size:2vh;
+    color:#2a2a2a;
+}
+.cartItemColorTitle{
+    font-size:2vh;
+    color:#2a2a2a;
+}
+.cartItemQuantityTitle{
+    font-size:2vh;
+    color:#2a2a2a;
+}
+.sizeSelected{
+    width: 6vh;
+    height: 3vh;
+    font-size:2vh;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    color:#2a2a2a;
+    border-radius: 5px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    margin-right:3vh;
+    margin-left: 1vh;
+}
+.colorDiv{
+    margin-top:3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cartItemColor{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 5px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    margin-left:1vh;
+}
+.quantitySelected{
+    width: 6vh;
+    height: 3vh;
+    font-size:2vh;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    color:#2a2a2a;
+    border-radius: 5px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    margin-left: 1vh;
+}
+.limit{
+    width:70%;
+    word-wrap: break-word;
+    margin-top:1vh;
+}
+
+#summaryDiv{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin-top:2vh;
+    position: relative;
+}
+
+#subtotalDiv{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+#subtotalText{
+    font-size:2.5vh;
+    color:#2a2a2a;
+}
+#subtotalValue{
+    font-size:2.5vh;
+    color:#2a2a2a;
+    position: absolute;
+    right:0;
+}
+#taxDiv{
+    margin-top:3vh;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+#taxText{
+    font-size:2.5vh;
+    color:#2a2a2a;
+}
+#taxValue{
+    font-size:2.5vh;
+    color:#2a2a2a;
+    position: absolute;
+    right:0;
+}
+#totalDiv{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+#totalText{
+    font-size:2.5vh;
+    color:#2a2a2a;
+}
+#totalValue{
+    font-size:2.5vh;
+    color:#2a2a2a;
+    position: absolute;
+    right:0;
+}
+#divider {
+    width: 100%;
+    height: 1px;
+    background-color: #2a2a2a;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+#checkoutButton {
+    display: inline-block;
+    width: 100%;
+    height: 5.5vh;
+    text-align: center;
+    color: #2a2a2a;
+    text-decoration: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 1.1vw;
+    border-radius: 6px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    background-color: #e3c8ff;
+    cursor: pointer;
+    margin-top:1vh;
+}
+#checkoutButton:hover {
+    background-color: #c894ff;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 10000000;
+    background-color: #e3c8ff;
+}
+#THEDIV {
+    display: none;
+}
+
+
+.hourglass{
+    display:block;
+    background:#e3c8ff;
+    margin:3em auto;
+    width:3em;
+    height:6em;
+    animation:hourglass 1s linear infinite;
+}
+
+.outer{
+    fill:#2a2a2a;
+}
+
+.middle{
+    fill:#e3c8ff;
+}
+
+@keyframes hourglass{
+    0%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset #2a2a2a 0 -0em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -6em 0 0;
+    }
+    80%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset #2a2a2a 0 -3em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -3em 0 0;
+    }
+    100%{
+        transform:rotate(180deg);
+        box-shadow:
+            inset #2a2a2a 0 -3em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -3em 0 0;
+    }
+}
+
+#checkoutError{
+    color:#ff2c2c;
+    font-size:2vh;
+    font-weight: 400;
+    text-align: center;
+    margin-top:1vh;
+}
+
+
+@media screen and (max-width:768px) {
+    #mainDiv{
+        flex-direction: column;
+        margin-top:7vh;
+    }
+    #leftDiv{
+        width: 100%;
+        margin-left:5vw;
+    }
+    #rightDiv{
+        margin-left:5vw;
+    }
+    #cartTitle{
+        font-size:4vh;
+    }
+    #cartOutput{
+        width:calc(100% - 5vw);
+    }
+    .cartItem{
+        width: calc(100% - 5vw);
+    }
+    .cartImage{
+        margin-left:1vh;
+    }
+    .cartItemTitle {
+        font-size:2.5vh;
+    }
+    .cartItemType {
+        font-size:1.6vh;
+    }
+    .cartItemPrice{
+        font-size:2vh;
+        top:1vh;
+        right:1vh;
+    }
+    .cartItemColorTitle{
+        font-size:2vh;
+    }
+    .cartItemColor{
+        width:2.5vh;
+        height: 2.5vh;
+    }
+    .cartItemSizeTitle{
+        font-size:2vh;
+    }
+    .cartItemQuantityTitle{
+        font-size:2vh;
+    }
+    .cartItemOptions{
+        bottom:7vh;
+    }
+    .sizeSelected{
+        width:5vh;
+        height:2.5vh;
+        font-size:2vh;
+        margin-left:0.5vh;
+        margin-right:3vh;
+    }
+    .quantitySelected{
+        width:5vh;
+        height:2.5vh;
+        font-size:2vh;
+        margin-left:0.5vh;
+    }
+
+
+    #summaryTitle{
+        font-size:4vh;
+    }
+    #summaryDiv{
+        width: calc(100% - 5vw);
+    }
+    #checkoutButton{
+        font-size: 2vh;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1200px) {
+    #mainDiv{
+        margin-top:7vh;
+    }
+    #leftDiv{
+        width: 60%;
+        margin-left:3vw;
+    }
+    #rightDiv{
+        margin-left:3vw;
+        width: 36%;
+    }
+    #cartTitle{
+        font-size:4vh;
+    }
+    #cartOutput{
+        width:100%
+    }
+    .cartItem{
+        width: 100%
+    }
+    .cartImage{
+        margin-left:1vh;
+    }
+    .cartItemTitle {
+        font-size:2.5vh;
+    }
+    .cartItemType {
+        font-size:1.6vh;
+    }
+    .cartItemPrice{
+        font-size:2vh;
+        top:1vh;
+        right:1vh;
+    }
+    .cartItemColorTitle{
+        font-size:2vh;
+    }
+    .cartItemColor{
+        width:2.5vh;
+        height: 2.5vh;
+    }
+    .cartItemSizeTitle{
+        font-size:2vh;
+    }
+    .cartItemQuantityTitle{
+        font-size:2vh;
+    }
+    .cartItemOptions{
+        bottom:7vh;
+    }
+    .sizeSelected{
+        width:5vh;
+        height:2.5vh;
+        font-size:2vh;
+        margin-left:0.5vh;
+        margin-right:3vh;
+    }
+    .quantitySelected{
+        width:5vh;
+        height:2.5vh;
+        font-size:2vh;
+        margin-left:0.5vh;
+    }
+
+
+    #summaryTitle{
+        font-size:4vh;
+    }
+    #summaryDiv{
+        width: calc(100% - 3vw);
+    }
+    #checkoutButton{
+        font-size: 2vh;
+    }
+}

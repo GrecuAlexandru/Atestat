@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,800;1,900&display=swap");
+
+body {
+    background: #ffffff;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color:#2a2a2a;
+}
+#bigdiv{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+#mainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 91vh;
+}
+#reportDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top:10vh;
+}
+#reportTitle{
+    font-size: 4.5vh;
+    font-weight: 800;
+    color:#2a2a2a;
+}
+#reportDescriptionTitle{
+    font-size: 2.5vh;
+    width: 35vw;
+    font-weight: 600;
+    color:#2a2a2a;
+    margin-top: 2vh;
+}
+#title{
+    font-size: 3vh;
+    font-weight: 700;
+    color:#2a2a2a;
+    margin-top:2vh;
+}
+#titleInputDiv{
+    float: left;
+    width: 35vw;
+    height: 5vh;
+    margin-top:0vh;
+    border-radius: 8px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#titleInput{
+    margin-left: 0.5vw;
+    border: 0;
+    background-color: transparent;
+    float: left;
+    outline: none;
+    width: 100%;
+    font-size: 2vh;
+    font-family: "Nunito", sans-serif;
+}
+#descriptionTitle{
+    font-size: 3vh;
+    font-weight: 700;
+    color:#2a2a2a;
+    margin-top:2vh;
+}
+#descriptionInputDiv{
+    float: left;
+    width: 35vw;
+    height: 30vh;
+    border-radius: 8px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+}
+#descriptionInput{
+    margin-left: 0.5vw;
+    border: 0;
+    background-color: transparent;
+    float: left;
+    outline: none;
+    width: 95%;
+    height: 100%;
+    resize: none;
+    font-size: 2vh;
+    font-family: "Nunito", sans-serif;
+}
+#success{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top:15vh;
+}
+#successTitle{
+    color:#2a2a2a;
+    font-size: 5vh;
+    font-weight: 700;
+}
+#successIcon{
+    align-self:center;
+    margin-top:3vh;
+    width: 8vw;
+    height: auto;
+}
+#successDescription{
+    color:#2a2a2a;
+    font-size: 2.5vh;
+    font-weight: 500;
+    width: 30vw;
+    margin-top:5vh;
+}
+#titleError{
+    font-size:2vh;
+    font-weight: 500;
+    color:#ff2c2c;
+}
+#descriptionError{
+    font-size:2vh;
+    font-weight: 500;
+    color:#ff2c2c;
+}
+#backHomeButton{
+    display: inline-block;
+    width: 30vw;
+    height: 5.5vh;
+    text-align: center;
+    color: #2a2a2a;
+    line-height: 5.5vh;
+    text-decoration: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 1.1vw;
+    border-radius: 6px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    background-color: #e3c8ff;
+    cursor: pointer;
+    margin-top:3vh;
+}
+#backHomeButton:hover {
+    background-color: #c894ff;
+}
+#reportAnotherProblem{
+    color:#2a2a2a;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size:2vh;
+    text-align:center;
+    margin-top:2vh;
+}
+#error{
+    display: none;
+    flex-direction: column;
+    align-items:center;
+    margin-top:15vh;
+}
+#errorTitle{
+    color:#2a2a2a;
+    font-size: 5vh;
+    font-weight: 700;
+}
+#errorIcon{
+    align-self:center;
+    margin-top:3vh;
+    width: 8vw;
+    height: auto;
+}
+#errorDescription{
+    color:#2a2a2a;
+    font-size: 2.5vh;
+    font-weight: 500;
+    width: 30vw;
+    margin-top:5vh;
+}
+#tryAgainButton{
+    display: inline-block;
+    width: 30vw;
+    height: 5.5vh;
+    text-align: center;
+    color: #2a2a2a;
+    line-height: 5.5vh;
+    text-decoration: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 1.1vw;
+    border-radius: 6px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    background-color: #e3c8ff;
+    cursor: pointer;
+    margin-top:3vh;
+}
+#tryAgainButton:hover {
+    background-color: #c894ff;
+}
+#sendButton{
+    display: inline-block;
+    width: 35.1vw;
+    height: 5.5vh;
+    text-align: center;
+    color: #2a2a2a;
+    line-height: 5.5vh;
+    text-decoration: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 1.1vw;
+    border-radius: 6px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    background-color: #e3c8ff;
+    cursor: pointer;
+    margin-top:3vh;
+}
+#sendButton:hover {
+    background-color: #c894ff;
+}
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 10000000;
+    background-color: #e3c8ff;
+}
+#THEDIV {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+}
+.hourglass{
+    display:block;
+    background:#e3c8ff;
+    margin:3em auto;
+    width:3em;
+    height:6em;
+    animation:hourglass 1s linear infinite;
+}
+
+.outer{
+    fill:#2a2a2a;
+}
+
+.middle{
+    fill:#e3c8ff;
+}
+
+@keyframes hourglass{
+    0%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset #2a2a2a 0 -0em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -6em 0 0;
+    }
+    80%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset #2a2a2a 0 -3em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -3em 0 0;
+    }
+    100%{
+        transform:rotate(180deg);
+        box-shadow:
+            inset #2a2a2a 0 -3em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -3em 0 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #reportDiv{
+        margin-left:5vw;
+        margin-top:5vh;
+    }
+    #reportTitle{
+        text-align: center;
+        font-size:9vw;
+        margin-left:-5vw;
+    }
+    #reportDescriptionTitle{
+        width: 90%;
+    }
+    #titleInputDiv{
+        width: calc(100% - 5vw);
+    }
+    #descriptionInputDiv{
+        width: calc(100% - 5vw);
+    }
+    #sendButton{
+        width: calc(100% - 5vw);
+        font-size:5vw;
+    }
+    #success{
+        margin-top:10vh;
+        margin-left:5vw;
+    }
+    #successTitle{
+        text-align: center;
+        margin-left:-5vw;
+    }
+    #successIcon{
+        width: 25vw;
+    }
+    #successDescription{
+        text-align: center;
+        width: calc(100% - 5vw);
+    }
+    #backHomeButton{
+        width: calc(100% - 5vw);
+        font-size:2.5vh;
+    }
+    #error{
+        margin-top:10vh;
+        margin-left:5vw;
+    }
+    #errorTitle{
+        text-align: center;
+        margin-left:-5vw;
+    }
+    #errorIcon{
+        width: 25vw;
+    }
+    #errorDescription{
+        text-align: center;
+        width: calc(100% - 5vw);
+    }
+    #tryAgainButton{
+        width: calc(100% - 5vw);
+        font-size:2.5vh;
+    }
+
+}
+@media screen and (min-width:769px) and (max-width:1200px) {
+    #reportDiv{
+        margin-left:5vw;
+        margin-top:5vh;
+    }
+    #reportTitle{
+        text-align: center;
+        font-size:5vh;
+        margin-left:-5vw;
+    }
+    #reportDescriptionTitle{
+        width: 90%;
+    }
+    #titleInputDiv{
+        width: calc(100% - 5vw);
+    }
+    #descriptionInputDiv{
+        width: calc(100% - 5vw);
+    }
+    #sendButton{
+        width: calc(100% - 5vw);
+        font-size:vh;
+    }
+    #success{
+        margin-top:10vh;
+        margin-left:5vw;
+    }
+    #successTitle{
+        text-align: center;
+        margin-left:-5vw;
+    }
+    #successIcon{
+        width: 15vw;
+    }
+    #successDescription{
+        text-align: center;
+        width: calc(100% - 5vw);
+    }
+    #backHomeButton{
+        width: calc(100% - 5vw);
+        font-size:2.5vh;
+    }
+    #error{
+        margin-top:10vh;
+        margin-left:5vw;
+    }
+    #errorTitle{
+        text-align: center;
+        margin-left:-5vw;
+    }
+    #errorIcon{
+        width: 15vw;
+    }
+    #errorDescription{
+        text-align: center;
+        width: calc(100% - 5vw);
+    }
+    #tryAgainButton{
+        width: calc(100% - 5vw);
+        font-size:2.5vh;
+    }
+}

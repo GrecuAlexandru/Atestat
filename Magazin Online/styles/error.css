@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,800;1,900&display=swap");
+
+body {
+    background: #ffffff;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color:#2a2a2a;
+}
+#bigdiv{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+#mainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    height: 91vh;
+}
+#error{
+    margin-top:-10vh;
+    color: #2a2a2a;
+    font-size: 15vw;
+    font-weight: 900;
+}
+#description{
+    font-size: 2vh;
+    font-weight: 600;
+    color:#2a2a2a;
+    width: 30vw;
+    margin-bottom: 3vh;
+    margin-top:-6vh;
+}
+
+.btn {
+    display: inline-block;
+    width: 14vw;
+    height: 5.5vh;
+    text-align: center;
+    color: #2a2a2a;
+    line-height: 5.5vh;
+    text-decoration: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 1.1vw;
+    border-radius: 6px;
+    border: solid #2a2a2a;
+    border-width: 1 1px;
+    background-color: #e3c8ff;
+    cursor: pointer;
+    margin-left:1vw;
+    margin-right: 1vw;
+}
+.btn:hover {
+    background-color: #c894ff;
+}
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 10000000;
+    background-color: #e3c8ff;
+}
+#THEDIV {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+}
+.hourglass{
+    display:block;
+    background:#e3c8ff;
+    margin:3em auto;
+    width:3em;
+    height:6em;
+    animation:hourglass 1s linear infinite;
+}
+
+.outer{
+    fill:#2a2a2a;
+}
+
+.middle{
+    fill:#e3c8ff;
+}
+
+@keyframes hourglass{
+    0%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset #2a2a2a 0 -0em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -6em 0 0;
+    }
+    80%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset #2a2a2a 0 -3em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -3em 0 0;
+    }
+    100%{
+        transform:rotate(180deg);
+        box-shadow:
+            inset #2a2a2a 0 -3em 0 0,
+            inset #e3c8ff 0 -3em 0 0,
+            inset #2a2a2a 0 -3em 0 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #error{
+        margin-top:0vh;
+        font-size:26vw;
+    }
+    #description{
+        width: 90%;
+        margin-top:0;
+    }
+    #infoDiv{
+        display:flex;
+        flex-direction: column;
+        width: 93%;
+    }
+    .btn{
+        margin-top:1vh;
+        width: 100%;
+        font-size:5vw;
+    }
+    #mainDiv{
+        margin-bottom:2vh;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:1024px) {
+    #error{
+        margin-top:0vh;
+        font-size:15vw;
+    }
+    #description{
+        width: 70%;
+        margin-top:0;
+    }
+    #infoDiv{
+        display:flex;
+        flex-direction: row;
+        width: 93%;
+    }
+    .btn{
+        margin-top:1vh;
+        width: 100%;
+        font-size:2.5vw;
+    }
+    #mainDiv{
+        margin-bottom:2vh;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1300px) {
+    #description{
+        width: 50%;
+        margin-top:-2vh;
+    }
+    .btn{
+        width: 20vw;
+        font-size:1.6vw;
+    }
+}
